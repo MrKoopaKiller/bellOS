@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+echo "❄️ BellOS ❄️"
+
+nixfiles=(
+    "configuration.nix"
+    "home.nix"
+    "zsh.nix"
+)
+nixdirs=(
+    "configfiles"
+    "scripts"
+)
+
+for file in "${nixfiles[@]}"; do
+    sudo cp -f ./nixos/${file} /etc/nixos/${file}
+done
+
+for dir in "${nixdirs[@]}"; do
+    sudo rm -rf /etc/${dir}
+    sudo cp -r $dir /etc/${dir}
+done
+
+echo "replacing current Nix configs ..."
+sudo nixos-rebuild switch
