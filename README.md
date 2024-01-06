@@ -1,6 +1,8 @@
-# BelloOS ❄️ NixOS Configs
+# bellOS ❄️ nixOS configs
 
-BellOS is my production machines config files.
+My nixOS config files.
+
+Feel free to use, modify and share the love with your friends. 🫶
 
 [WIP]
 

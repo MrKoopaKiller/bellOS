@@ -8,6 +8,8 @@
   imports = [
     ./hardware-configuration.nix
     ./home.nix
+    ./zsh.nix
+    ./tmux.nix
   ];
 
   # Bootloader
@@ -42,6 +44,7 @@
     description = "Koopa Killer";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   programs.hyprland.enable = true;
@@ -60,76 +63,73 @@
     (import ../scripts/squirtle.nix { inherit pkgs; })
     (import ../scripts/autohypr.nix { inherit pkgs; })
     ## Utils
+    btop
+    gnome.file-roller
+    grim
+    gvfs
+    imv
+    killall
+    libnotify
+    libvirt
+    lm_sensors
+    networkmanagerapplet
+    polkit_gnome
+    slurp
+    swaynotificationcenter
+    swww
+    tofi
+    unrar
+    unzip
+    v4l-utils
+    xfce.thunar
+    ## terminal utils
     eza
+    git
+    ripgrep
+    # tmux
     trash-cli
     vim
     wget
-    btop
-    git
-    libvirt
-    swww
-    polkit_gnome
-    # gnome-keyring
-    grim
-    slurp
-    lm_sensors
-    unzip
-    unrar
-    gnome.file-roller
-    libnotify
-    swaynotificationcenter
-    tofi
-    xfce.thunar
-    imv
-    killall
-    v4l-utils
-    networkmanagerapplet
+    zsh
     ## Misc
-    direnv
-    ydotool
-    wl-clipboard
-    socat
+    cmatrix
     cowsay
+    direnv
+    lolcat
     lsd
     neofetch
     pkg-config
-    cmatrix
-    lolcat
+    socat
     transmission-gtk
+    wl-clipboard
+    ydotool
     ## Photo & Video
-    mpv
-    gimp
-    obs-studio
     blender
+    gimp
     kdenlive
+    mpv
+    obs-studio
     ## Online
+    discord
     firefox
-    # discord
+    google-chrome
     ## Dev
-    # meson
-    # glibc
-    # hugo
-    # gnumake
-    # ninja
     go
     nodejs_21
-    # godot_4
-    # rustup
-    # rust-analyzer
+    terraform
+    terragrunt
+    kubectl
     ## Audio
     spotify
     pavucontrol
     audacity
     ## Gaming
     steam
-    # zeroad
-    # xonotic
-    # openra
-    # Fonts
+    ## Fonts & personalization
     font-awesome
-    symbola
-    noto-fonts-color-emoji
     material-icons
+    noto-fonts-color-emoji
+    symbola
   ];
 
   fonts.packages = with pkgs; [

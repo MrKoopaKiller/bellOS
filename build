@@ -5,6 +5,7 @@ nixfiles=(
     "configuration.nix"
     "home.nix"
     "zsh.nix"
+    "tmux.nix"
 )
 nixdirs=(
     "configfiles"

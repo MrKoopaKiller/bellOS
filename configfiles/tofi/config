@@ -1,11 +1,5 @@
-# ███████╗ █████╗ ███╗   ██╗███████╗██╗   ██╗███████╗
-# ╚══███╔╝██╔══██╗████╗  ██║██╔════╝╚██╗ ██╔╝██╔════╝
-#   ███╔╝ ███████║██╔██╗ ██║█████╗   ╚████╔╝ ███████╗
-#  ███╔╝  ██╔══██║██║╚██╗██║██╔══╝    ╚██╔╝  ╚════██║
-# ███████╗██║  ██║██║ ╚████║███████╗   ██║   ███████║
-# ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝
-# Dotfiles circa 2023
-
+## tofi config
+#
 # Font
 font = Ubuntu Nerd Font
 font-size = 18
@@ -23,7 +17,7 @@ padding-bottom = 0
 padding-left = 35%
 padding-right = 0
 num-results = 5
-prompt-text = "What Ya Need? "
+prompt-text = "What do you wish?"
 
 background-color = #000A
 text-color = #c0caf5
